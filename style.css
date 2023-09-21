@@ -1,0 +1,458 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+  
+  .nav-container {
+    position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s;
+  z-index: 2;
+}
+  
+  #toggle-menu {
+    display: none;
+  }
+  
+  .abrir-menu {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 2;
+  transition: left 0.3s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+  
+  .abrir-menu::after {
+    content: attr(data-open);
+  }
+  
+  #toggle-menu:checked+.abrir-menu::after {
+    content: attr(data-close);
+  }
+  
+  .nav-box {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-box li {
+    padding: 10px 0;
+  }
+  
+  .nav-box a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-box a:hover {
+    background-color: #1a52ec;
+  }
+  
+  #toggle-menu:checked~.nav-container {
+    left: 0;
+  }
+  
+  #toggle-menu:checked~.abrir-menu {
+    left: 250px;
+  }
+  
+  #toggle-menu:checked~.contenido {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .contenido {
+    transition: background-color 0.3s;
+  }
+
+.header-container{
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 10px;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.header-container img{
+  height: 35px;
+
+}
+
+.search-bar{
+   width: 350px;
+   height: 30px;
+   border: 2px solid rgb(192, 192, 6);
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
+}
+
+.title{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.propaganda-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.camisetasbody-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.camisetasbody-inicio{
+    background-color: white;
+    color: #333;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.camisetas-Container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.camisetas-Container img{
+    height: 220px;
+}
+
+.camiseta-container{
+    transition: transform 1s;
+    font-size: 15px;
+    width: 100%;
+    max-width: 220px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid rgb(153, 113, 4);
+    background-color: #fff;
+}
+
+.camiseta-container:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.ayuda-container{
+    text-align: center;
+    width: 100%;
+    background-color: #1a3b55;
+    color: #fff;
+}
+
+.input-group {
+  text-align: center;  
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 5px;  
+}
+
+.input-field{
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  font-size: 16px; 
+}
+
+.button-class {
+  margin-top: 15px; 
+}
+
+.button-type {
+  padding: 10px 20px; 
+  background-color: #fff; 
+  color: #333; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer;
+}
+
+.ligas-container{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.beneficios-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+ background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.beneficios-container{
+  font-size: 15px;
+  margin-bottom: 10px; 
+  background-color: #1a3b55;
+}
+
+.info-beneficio p {
+  font-size: 16px;
+}
+
+
+.info-beneficio{
+  max-width: 300px;
+  padding: 20px; 
+  text-align: center;
+  margin: 10px; 
+  box-shadow: -1px 0px 25px 1px rgba(0,0,0,0.75);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: #fff;
+  font-family:sans-serif;
+}
+
+.logos-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.logos-container img{
+  height: 100px;
+  width: 100px;
+}
+
+
+.foot{
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-redes{
+  display: flex;
+  align-items: flex-start;
+}
+
+
+@media(width <= 1200px){
+  .beneficios-container{
+    height: auto;
+    display: flex;
+  }
+}
+
+@media(width <= 870px){
+  .logos-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  
+}
+
+@media (width <= 1000px){
+  .beneficios-container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-container{
+    width: auto;
+    height: auto;
+  }
+}
+
+  .ayuda-container{
+    width: auto;
+    display: block;
+  }
+ 
+  .input-field{
+    width: auto;
+  }
+
+  .info-beneficio{
+    width: auto;
+  }
+
+@media (width <= 745px){
+  .adidas-logo{
+    justify-content: center;
+    align-items: center;
+  }
+  .nike-logo{
+    justify-content: center;
+    align-items: center;
+  }
+  .puma-logo{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (width <= 300px){
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #222;
+    transition: left 0.3s;
+    z-index: 2;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -ms-transition: left 0.3s;
+    -o-transition: left 0.3s;
+}
+
+.abrir-menu {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+}
+
+#toggle-menu:checked~.abrir-menu {
+  left: 210px;
+}
+
+}
+
+@media(width <= 710px){
+  .header-container{
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media(width <= 658px){
+  .header-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .abrir-menu{
+    top: 15px;
+  }
+}
+
+@media (width <= 350px){
+  .search-bar{
+    width: auto;
+  }
+}
+
+
+.adidas-logo{
+  display: flex;
+  margin-left: 80px;
+}
+
+.adidas-logo img{
+  height: 150px;
+}
+
+.adidas-camisetas{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    gap: 10px; 
+    justify-content: center; 
+}
+
+.adidas-camisetas img{
+    height: 220px;
+}
+
+.nike-logo{
+  display: flex;
+  margin-left: 80px;
+}
+
+.nike-logo img{
+  height: 150px;
+}
+
+.nike-camiseta{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    gap: 10px; 
+    justify-content: center; 
+}
+
+.nike-camiseta img{
+    height: 220px;
+}
+
+.puma-logo{
+  display: flex;
+  margin-left: 80px;
+}
+
+.puma-logo img{
+  height: 150px;
+}
+
+.puma-camiseta{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    gap: 10px; 
+    justify-content: center; 
+}
+
+.puma-camiseta img{
+    height: 220px;
+}
